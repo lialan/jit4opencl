@@ -1,0 +1,4 @@
+Buildfile: build.xml
+
+compile:
+     [echo] ./lib/freemarker.jar:./lib/antlr-runtime-3.0.1.jar

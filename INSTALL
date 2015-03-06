@@ -1,0 +1,7 @@
+1. Requirements
+
+To install unPython, you need Python 2.5 (other versions may or may not work, untested) and Java 5 or Java 6. Currently I have only tested on Linux 32-bit but I believe getting it to work on other OS is not hard.
+
+2. Install
+
+First, open scripts/frontend.py in a text editor. You will see a variables called "jarbase" and "distbase". Edit the values of jarbase and distbase to the ABSOLUTE path of the all the jars in the unpython folder. You may also need to edit the path to Python includes, numpy includes and the path to the C compiler in frontend.py. 

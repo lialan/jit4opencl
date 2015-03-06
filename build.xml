@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<project name="unPython" default="jar" basedir=".">
+	<property name="src" value="./src"/>
+	<property name="build" value="./build"/>
+	<property name="lib" value="./lib" />
+	<property name="dist" value="./dist"/>
+	<property name="scripts" value="./scripts"/>
+	<path id="scalasrc">
+		<fileset dir="${src}" includes="./org/unpython/scala/**scala"/>
+	</path>
+
+	<target name="compile">
+		<echo message="${lib}/freemarker.jar:./lib/antlr-runtime-3.0.1.jar"/>
+		<mkdir dir="build"/>
+		<javac srcdir="${src}" destdir="${build}" 
+            classpath="./lib/freemarker.jar:./lib/antlr-runtime-3.0.1.jar"
+            debug="true"/>
+
+		<apply executable="fsc">
+			<arg value="-d"/>
+			<arg value="${build}"/>
+			<arg value="-classpath"/>
+			<arg value="./lib/freemarker.jar:./lib/antlr-runtime-3.0.1.jar:./lib/scala-library.jar"/>
+			<fileset dir="./src" includes="org/unpython/newscala/*.scala"/>
+		</apply>
+
+		
+		<!--
+		<scalac 
+			srcdir="${src}"
+			destdir="${build}"
+			classpath="./lib/freemarker.jar:./lib/antlr-runtime-3.0.1.jar:./lib/scala-library.jar">
+			<include name="org/unpython/newscala/*.scala" />
+		</scalac>
+		-->
+	</target>
+	
+	<target name="jar" depends="compile">
+		<mkdir dir="dist"/>
+        <copy file="${src}/org/unpython/compiler/module.ftl" todir="${build}/org/unpython/compiler"/>
+		<jar destfile="${dist}/unpython.jar" 
+			basedir="${build}"
+			includes="**/*class **/*ftl"/>
+	</target>
+
+	<target name="zip" depends="jar,compile">
+		<zip destfile="${dist}/unpython.zip" 
+			basedir="."
+			includes="${dist}/unpython.jar ${lib}/*jar ${scripts}/*py NOTICE INSTALL RUN license/*"
+			/>
+	</target>
+
+    <target name="clean">
+        <delete dir="${build}"/>
+        <delete dir="${dist}"/>
+    </target>
+
+</project>

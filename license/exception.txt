@@ -1,0 +1,23 @@
+The following "Additional Permissions" are granted by Rahul Garg under GNU GPL version 3 section 7.
+
+1. If you modify this program, or any covered work, by linking or combining it with the Visigoth Software Society's FreeMarker library, containing parts covered by the terms of the FreeMarker licenses, or a modified version of the FreeMarker library under the FreeMarker license, Rahul Garg grants you additional permission to convey the resulting work. Corresponding Source for a non-source form of such a combination shall include the source code for the parts of FreeMarker used as well as that of the covered work. 
+
+2. If you modify this program, or any covered work, by linking or combining it with software (hereby referred to as "Your Software"), Rahul Garg grants you additional permission to convey the resulting work provided that  
+
+A) Your software is licensed under one of the following licenses:
+
+i) Common Development and Distribution License 1.0
+ii) Eclipse Public License v1.0
+iii) Common Public License v1.0
+
+B) Corresponding Source for non-source form of such a combination shall include the source code of Your Software.
+
+C) Your or any other contributor's rights to:
+i) distribute the source code of Your Software to anyone for any purpose;
+and
+ii) publicly discuss the development project for Your Software and its goals in any form and in any forum
+are not prohibited by any legal instrument, including but not limited to contracts, non-disclosure agreements, and employee contracts.
+
+3. If this program copies any FreeMarker template files into one or more output files, you may use that output file without restriction.
+
+END OF ADDITIONAL PERMISSIONS.

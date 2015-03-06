@@ -1,0 +1,5 @@
+Make sure you have installed the compiler correctly after reading INSTALL file.
+To compile a file called myfile.py you need to do (in the folder where you have myfile):
+
+python /path/to/unpython/scripts/frontend.py myfile.py
+This should produce a ".so" file and ".c" file if the command is successful.
